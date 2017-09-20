@@ -1,20 +1,20 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>三周年风风雨雨，我们共同走过</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>三周年风风雨雨，我们共同走过</title>
 
-<style type="text/css">
-@font-face {
-	font-family: digit;
-	src: url('digital-7_mono.ttf') format("truetype");
-}
-</style>
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
 
-<link href="css/default.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/garden.js"></script>
-<script type="text/javascript" src="js/functions.js"></script>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
 
 </head>
 
@@ -51,7 +51,7 @@
 			<span class="comments">// Still in the distant future.</span><br />
 			The boy has but one dream;<br />
 			The boy wants the girl could well have been happy.<br />
-		    <span class="keyword">And he would give her all of her work through her own efforts.</span><br />
+			<span class="keyword">And he would give her all of her work through her own efforts.</span><br />
 			<br>
 			<br>
 			I want to say:<br />
@@ -83,70 +83,70 @@
 </div>
 
 <!-- controls="controls" -->
-	<!--<audio id="audio" autoplay="autoplay" loop="loop">-->
-			<!--<source src="mp3/meetyou.mp3" type="audio/mpeg">-->
-		<!--Your browser does not support the audio tag.-->
-	<!--</audio>-->
+<!--<audio id="audio" autoplay="autoplay" loop="loop">-->
+<!--<source src="mp3/meetyou.mp3" type="audio/mpeg">-->
+<!--Your browser does not support the audio tag.-->
+<!--</audio>-->
 <!--<div style="display: none;">-->
 <!--</div>-->
 <script type="text/javascript">
-var offsetX = $("#loveHeart").width() / 2;
-var offsetY = $("#loveHeart").height() / 2 - 55;
-var together = new Date();
-together.setFullYear(2014, 8, 23);
-together.setHours(20);
-together.setMinutes(0);
-together.setSeconds(0);
-together.setMilliseconds(0);
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    var together = new Date();
+    together.setFullYear(2014, 8, 23);
+    together.setHours(20);
+    together.setMinutes(0);
+    together.setSeconds(0);
+    together.setMilliseconds(0);
 
-if (!document.createElement('canvas').getContext) {
-	var msg = document.createElement("div");
-	msg.id = "errorMsg";
-	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-	document.body.appendChild(msg);
-	$("#code").css("display", "none")
-	$("#copyright").css("position", "absolute");
-	$("#copyright").css("bottom", "10px");
-	document.execCommand("stop");
-} else {
-	setTimeout(function () {
-		startHeartAnimation();
-	}, 5000);
+    if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none")
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+    } else {
+        setTimeout(function () {
+            startHeartAnimation();
+        }, 5000);
 
-	timeElapse(together);
-	setInterval(function () {
-		timeElapse(together);
-	}, 500);
+        timeElapse(together);
+        setInterval(function () {
+            timeElapse(together);
+        }, 500);
 
-	adjustCodePosition();
-	$("#code").typewriter();
-}
+        adjustCodePosition();
+        $("#code").typewriter();
+    }
 
 
-/**
- * 微信端和手机不能支持自动播放问题
- * 原因是：android  ios 内部原因 为了节省流量，规定不自动播放音频视频
- * 所以采用以下方式解决
- */
+    /**
+     * 微信端和手机不能支持自动播放问题
+     * 原因是：android  ios 内部原因 为了节省流量，规定不自动播放音频视频
+     * 所以采用以下方式解决
+     */
 //--创建页面监听，等待微信端页面加载完毕 触发音频播放
-document.addEventListener('DOMContentLoaded', function () {
-    function audioAutoPlay() {
-        var audio = document.getElementById('audio');
-        audio.play();
-        document.addEventListener("WeixinJSBridgeReady", function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        function audioAutoPlay() {
+            var audio = document.getElementById('audio');
             audio.play();
-        }, false);
-    }
-    audioAutoPlay();
-});
-//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
-document.addEventListener('touchstart', function () {
-    function audioAutoPlay() {
-        var audio = document.getElementById('audio');
-        audio.play();
-    }
-    audioAutoPlay();
-});
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+        }
+        audioAutoPlay();
+    });
+    //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+    document.addEventListener('touchstart', function () {
+        function audioAutoPlay() {
+            var audio = document.getElementById('audio');
+            audio.play();
+        }
+        audioAutoPlay();
+    });
 </script>
 </body>
 </html>
